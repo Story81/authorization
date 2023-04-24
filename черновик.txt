@@ -1,0 +1,172 @@
+package com.max.idea;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        for (int i=0;
+        i < array1.length;
+        i++) {
+            if (!(array2[i] % 2 == 0)) {
+                System.out.println(array1[i]);
+            }
+        }
+    }
+}
+______________
+package com.max.idea;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+       Scanner scan = new Scanner(System.in);
+       System.out.print("Введите первое число: ");
+        float numx = scan.nextFloat();
+       System.out.print("Введите второе число: ");
+        float numy = scan.nextFloat();
+       System.out.print("Введите третье число: ");
+        float numz = scan.nextFloat();
+
+       float srednee = ((numx + numy + numz) / 3);
+        System.out.println("Среднее арифметическое чисел= " + srednee);
+
+        float res = (srednee / 2);
+       // для самопроверки* System.out.println(res);
+
+        int result = (int)Math.floor(res);
+       // для самопроверки* System.out.println("результат деления на 2 с округлением в меньшую сторону: " + result);
+
+        if (result >= 3)
+            System.out.println("Программа выполнена корректно");
+    }
+}
+
+_________________________________________________________
+
+package com.max.idea;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Выберите что переводить: 1 - масса, 2 - расстояние :");
+        int chois1 = scan.nextInt();
+
+        switch (chois1) {
+            case (1):
+                System.out.print("Выберите единицу измерения: 1 - кг, 2 - пуд, 3 - фунт :");
+                int chois2 = scan.nextInt();
+                System.out.print("Введите число: ");
+                float num1 = scan.nextFloat();
+                if (chois2 == 1)
+                    System.out.println(("Килограммы: " + num1) + "\n" + ("Пуды: " + num1*0.0610) + "\n" + ("Фунты: " + num1*0.45));
+                else if (chois2 == 2)
+                    System.out.println(("Килограммы: " + num1*16.38) + "\n" + ("Пуды: " + num1) + "\n" + ("Фунты: " + num1*36.11));
+                else if (chois2 == 3)
+                    System.out.println(("Килограммы: " + num1*33.33) + "\n" + ("Пуды: " + num1*333) + "\n" + ("Фунты: " + num1));
+                else {
+                    System.out.println("что то там");
+                }
+                break;
+
+            case (2):
+                System.out.print("Выберите единицу измерения: 1 - метр, 2 - миля, 3 - ярд, 4 - фут :");
+                int chois3 = scan.nextInt();
+                System.out.print("Введите число: ");
+                break;
+
+
+
+      //  float num1 = scan.nextFloat();
+
+
+            //default:
+             //System.out.println("Что-то пошло не так");
+        }
+    }
+}
+_____________________
+
+import java.util.Scanner;
+
+class Test {
+
+	public static void main(String[] args) {
+		System.out.print("Введите любое целое положительное число: ");
+		Scanner sc = new Scanner(System.in); 
+		int n = sc.nextInt();
+		int sum = 0;
+		for (int i=1; i<= n; i++){
+			sum = sum + i;
+		}
+		System.out.println (sum);		
+	}
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+import java.util.Scanner;
+ 
+class Test {
+ 
+	public static void main(String[] args) {
+		System.out.print("Введите любое целое положительное число: ");
+		Scanner sc = new Scanner(System.in); 
+		int n = sc.nextInt();
+		int sum = 0;
+		for (int i=1; i<= n; i++){
+			sum = sum + i;
+		}
+		System.out.println (sum);		
+	}
+
+Выделить код
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+static void Main(string[] args)
+        {
+            Console.Write("Введите минимальное число: ");
+            var downBorder = int.Parse(Console.ReadLine());
+            Console.Write("Введите максимальное число: ");
+            var upBorder = int.Parse(Console.ReadLine());
+            var sum = 0;
+            for (; downBorder <= upBorder; downBorder++)
+            {
+                if(downBorder % 2 != 0)
+                {
+                    sum += downBorder;
+                }
+            }
+            Console.WriteLine(sum);
+ 
+            Console.ReadLine();
+        }
